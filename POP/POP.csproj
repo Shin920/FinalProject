@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CE23D7D-5876-4CF8-80FE-9E90A93CA9EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>POP</RootNamespace>
+    <AssemblyName>POP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Export, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.1.Extensions, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsyncSocket\AsyncSocket.cs" />
+    <Compile Include="AsyncSocket\AsyncSocketClient.cs" />
+    <Compile Include="AsyncSocket\AsyncSocketServer.cs" />
+    <Compile Include="Controls\MachineButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MachineButton.Designer.cs">
+      <DependentUpon>MachineButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MachineButtonSample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MachineButtonSample.Designer.cs">
+      <DependentUpon>MachineButtonSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\picButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\picButton.Designer.cs">
+      <DependentUpon>picButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RegBadQty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RegBadQty.Designer.cs">
+      <DependentUpon>RegBadQty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\UserProgressBar.Designer.cs">
+      <DependentUpon>UserProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMachineTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMachineTask.Designer.cs">
+      <DependentUpon>frmMachineTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegBadReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegBadReason.Designer.cs">
+      <DependentUpon>frmRegBadReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVacReasonPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVacReasonPopup.Designer.cs">
+      <DependentUpon>frmVacReasonPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBakePottery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBakePottery.Designer.cs">
+      <DependentUpon>frmBakePottery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreatePalette.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreatePalette.Designer.cs">
+      <DependentUpon>frmCreatePalette.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateWorkOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateWorkOrder.Designer.cs">
+      <DependentUpon>frmCreateWorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForming.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForming.Designer.cs">
+      <DependentUpon>frmForming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFrameSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFrameSet.Designer.cs">
+      <DependentUpon>frmFrameSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoadFiring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoadFiring.Designer.cs">
+      <DependentUpon>frmLoadFiring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoadPerformance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoadPerformance.Designer.cs">
+      <DependentUpon>frmLoadPerformance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPacking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPacking.Designer.cs">
+      <DependentUpon>frmPacking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPackUnloading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPackUnloading.Designer.cs">
+      <DependentUpon>frmPackUnloading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessCondition.Designer.cs">
+      <DependentUpon>frmProcessCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductCar.Designer.cs">
+      <DependentUpon>frmProductCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReCreatePalette.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReCreatePalette.Designer.cs">
+      <DependentUpon>frmReCreatePalette.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetOperation.Designer.cs">
+      <DependentUpon>frmSetOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVacateCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVacateCar.Designer.cs">
+      <DependentUpon>frmVacateCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceive.Designer.cs">
+      <DependentUpon>frmReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorkerSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkerSet.Designer.cs">
+      <DependentUpon>frmWorkerSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrdQtyPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrdQtyPopUp.Designer.cs">
+      <DependentUpon>PrdQtyPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProdQtyPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdQtyPopup.Designer.cs">
+      <DependentUpon>ProdQtyPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPreviewForm.Designer.cs">
+      <DependentUpon>ReportPreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\BadProdService.cs" />
+    <Compile Include="Service\CartService.cs" />
+    <Compile Include="Service\MachineService.cs" />
+    <Compile Include="Service\MoldService.cs" />
+    <Compile Include="Service\PackService.cs" />
+    <Compile Include="Service\ProcessService.cs" />
+    <Compile Include="Service\SetProcessConditionService.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Compile Include="Service\WorkOrderService.cs" />
+    <Compile Include="SetOperatePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetOperatePopup.Designer.cs">
+      <DependentUpon>SetOperatePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskSection.cs" />
+    <Compile Include="TcpControl.cs" />
+    <Compile Include="ThreadMachineTask.cs" />
+    <Compile Include="Util\CommonUtil.cs" />
+    <Compile Include="XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\MachineButton.resx">
+      <DependentUpon>MachineButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MachineButtonSample.resx">
+      <DependentUpon>MachineButtonSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\picButton.resx">
+      <DependentUpon>picButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RegBadQty.resx">
+      <DependentUpon>RegBadQty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMachineTask.resx">
+      <DependentUpon>frmMachineTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegBadReason.resx">
+      <DependentUpon>frmRegBadReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVacReasonPopup.resx">
+      <DependentUpon>frmVacReasonPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBakePottery.resx">
+      <DependentUpon>frmBakePottery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreatePalette.resx">
+      <DependentUpon>frmCreatePalette.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateWorkOrder.resx">
+      <DependentUpon>frmCreateWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForming.resx">
+      <DependentUpon>frmForming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFrameSet.resx">
+      <DependentUpon>frmFrameSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadFiring.resx">
+      <DependentUpon>frmLoadFiring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadPerformance.resx">
+      <DependentUpon>frmLoadPerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPacking.resx">
+      <DependentUpon>frmPacking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPackUnloading.resx">
+      <DependentUpon>frmPackUnloading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessCondition.resx">
+      <DependentUpon>frmProcessCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductCar.resx">
+      <DependentUpon>frmProductCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReCreatePalette.resx">
+      <DependentUpon>frmReCreatePalette.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetOperation.resx">
+      <DependentUpon>frmSetOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVacateCar.resx">
+      <DependentUpon>frmVacateCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceive.resx">
+      <DependentUpon>frmReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkerSet.resx">
+      <DependentUpon>frmWorkerSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrdQtyPopUp.resx">
+      <DependentUpon>PrdQtyPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdQtyPopup.resx">
+      <DependentUpon>ProdQtyPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SetOperatePopup.resx">
+      <DependentUpon>SetOperatePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\1232.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\brick.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\close.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\exit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\fire.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\fire2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\fire3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\firing.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\images.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\logout.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\noImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\버튼.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\버튼2.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\FinalProjectVO.csproj">
+      <Project>{511fe5d6-1f1c-4358-b72b-17821bcc2a93}</Project>
+      <Name>FinalProjectVO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinalProjectDAC\FinalProjectDAC.csproj">
+      <Project>{d040b795-bc61-4958-93e5-f0016144327b}</Project>
+      <Name>FinalProjectDAC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinalProject\FinalProject.csproj">
+      <Project>{4ebac6cd-2453-4b77-b992-2df9993da8d9}</Project>
+      <Name>FinalProject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

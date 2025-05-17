@@ -1,0 +1,1192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EBAC6CD-2453-4B77-B992-2DF9993DA8D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FinalProject</RootNamespace>
+    <AssemblyName>FinalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.1.Drawing, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Export, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.1.Extensions, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>..\..\..\Downloads\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarcodeSetting_Kim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarcodeSetting_Kim.Designer.cs">
+      <DependentUpon>BarcodeSetting_Kim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\AButton.designer.cs">
+      <DependentUpon>AButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ASplitContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ASplitContainer.Designer.cs">
+      <DependentUpon>ASplitContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DateTimePickerSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DateTimePickerSearch.Designer.cs">
+      <DependentUpon>DateTimePickerSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\UcTabControl.designer.cs">
+      <DependentUpon>UcTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryManagementForm\frmMakeWorkLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiaryManagementForm\frmMakeWorkLog.Designer.cs">
+      <DependentUpon>frmMakeWorkLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryManagementForm\frmMaterialWorkLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiaryManagementForm\frmMaterialWorkLog.Designer.cs">
+      <DependentUpon>frmMaterialWorkLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryManagementForm\frmPankingWorkLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiaryManagementForm\frmPankingWorkLog.Designer.cs">
+      <DependentUpon>frmPankingWorkLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryManagementForm\PackingLog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DiaryManagementForm\PackingLog.designer.cs">
+      <DependentUpon>PackingLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryManagementForm\ReportPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiaryManagementForm\ReportPreviewForm.Designer.cs">
+      <DependentUpon>ReportPreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryManagementForm\WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiaryManagementForm\WaitForm.designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryManagementForm\XtraReportFrmMakeWorkLog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DiaryManagementForm\XtraReportFrmMakeWorkLog.Designer.cs">
+      <DependentUpon>XtraReportFrmMakeWorkLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiaryManagementForm\XtraReportFrmMaterialWorkLog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DiaryManagementForm\XtraReportFrmMaterialWorkLog.Designer.cs">
+      <DependentUpon>XtraReportFrmMaterialWorkLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain2.Designer.cs">
+      <DependentUpon>frmMain2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuSetting.Designer.cs">
+      <DependentUpon>frmMenuSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewUser.Designer.cs">
+      <DependentUpon>frmNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPost.Designer.cs">
+      <DependentUpon>frmPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmPkgGrdDetailDef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmPkgGrdDetailDef.designer.cs">
+      <DependentUpon>frmPkgGrdDetailDef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\AnalyseService.cs" />
+    <Compile Include="Service\LoginService.cs" />
+    <Compile Include="MasterDataManagementForm\frmUserDefCodeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmUserDefCodeDetail.Designer.cs">
+      <DependentUpon>frmUserDefCodeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentForm\frmGridPopUp2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\frmGridPopUp2.Designer.cs">
+      <DependentUpon>frmGridPopUp2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmDefectiveImageRegPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmDefectiveImageRegPopUp.Designer.cs">
+      <DependentUpon>frmDefectiveImageRegPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\BoxingService.cs" />
+    <Compile Include="Service\CarriageService.cs" />
+    <Compile Include="Service\CommonService.cs" />
+    <Compile Include="Service\DefectiveService.cs" />
+    <Compile Include="Service\MainFormService.cs" />
+    <Compile Include="Service\MenuService.cs" />
+    <Compile Include="Service\MoldService.cs" />
+    <Compile Include="Service\NonOperationService.cs" />
+    <Compile Include="ParentForm\List_List_b.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\List_List_b.designer.cs">
+      <DependentUpon>List_List_b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmProcessConditionRegistrationPopUp2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmProcessConditionRegistrationPopUp2.Designer.cs">
+      <DependentUpon>frmProcessConditionRegistrationPopUp2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmRegisterQualityMeasurementsPopUp2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmRegisterQualityMeasurementsPopUp2.Designer.cs">
+      <DependentUpon>frmRegisterQualityMeasurementsPopUp2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmNonOperatingRegistrationPopUp2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmNonOperatingRegistrationPopUp2.Designer.cs">
+      <DependentUpon>frmNonOperatingRegistrationPopUp2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmPerformanceModify2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmPerformanceModify2.Designer.cs">
+      <DependentUpon>frmPerformanceModify2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmPerformancePartition2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmPerformancePartition2.Designer.cs">
+      <DependentUpon>frmPerformancePartition2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmProcessCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmProcessCondition.Designer.cs">
+      <DependentUpon>frmProcessCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmUserDefCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmUserDefCode.Designer.cs">
+      <DependentUpon>frmUserDefCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmRegisterQualityMeasurements3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmRegisterQualityMeasurements3.Designer.cs">
+      <DependentUpon>frmRegisterQualityMeasurements3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmAddItem.Designer.cs">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmPalleteModifyRating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmPalleteModifyRating.Designer.cs">
+      <DependentUpon>frmPalleteModifyRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmCopyProcessConditions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmCopyProcessConditions.Designer.cs">
+      <DependentUpon>frmCopyProcessConditions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmMonitoringCarrige.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmMonitoringCarrige.Designer.cs">
+      <DependentUpon>frmMonitoringCarrige.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmQualitySpecificationCopyPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmQualitySpecificationCopyPopUp.Designer.cs">
+      <DependentUpon>frmQualitySpecificationCopyPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentForm\frmGridPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\frmGridPopUp.Designer.cs">
+      <DependentUpon>frmGridPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotice1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNotice1.Designer.cs">
+      <DependentUpon>frmNotice1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmQualityMeasurementInquiry2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmQualityMeasurementInquiry2.Designer.cs">
+      <DependentUpon>frmQualityMeasurementInquiry2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSystemCode1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSystemCode1.Designer.cs">
+      <DependentUpon>frmSystemCode1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAnalysisForm\frmMonthlyPkgState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageAnalysisForm\frmMonthlyPkgState.Designer.cs">
+      <DependentUpon>frmMonthlyPkgState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAnalysisForm\frmMonthlyPrdState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageAnalysisForm\frmMonthlyPrdState.Designer.cs">
+      <DependentUpon>frmMonthlyPrdState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmItemInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmItemInfo.Designer.cs">
+      <DependentUpon>frmItemInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmWorkCenterInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmWorkCenterInfo.Designer.cs">
+      <DependentUpon>frmWorkCenterInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManagementForm\frmMoldInfoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoldManagementForm\frmMoldInfoAdd.Designer.cs">
+      <DependentUpon>frmMoldInfoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManagementForm\frmMoldUse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoldManagementForm\frmMoldUse.Designer.cs">
+      <DependentUpon>frmMoldUse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ItemService.cs" />
+    <Compile Include="Service\NoticeService.cs" />
+    <Compile Include="Service\ProcessService.cs" />
+    <Compile Include="Service\ReportService.cs" />
+    <Compile Include="Service\ScreenItem_MasterService.cs" />
+    <Compile Include="Service\SpecificationsService.cs" />
+    <Compile Include="Service\UserDefCodeService.cs" />
+    <Compile Include="Service\UsergroupService.cs" />
+    <Compile Include="Service\UserInfoService.cs" />
+    <Compile Include="Service\WorkCenterService.cs" />
+    <Compile Include="Service\WorkHistoryService.cs" />
+    <Compile Include="Service\WorkOrderService.cs" />
+    <Compile Include="Service\WorkReqService.cs" />
+    <Compile Include="SystemManagementForm\frmFormM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmFormM.Designer.cs">
+      <DependentUpon>frmFormM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmLoginInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmLoginInfo.Designer.cs">
+      <DependentUpon>frmLoginInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmMenuM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmMenuM.Designer.cs">
+      <DependentUpon>frmMenuM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmMenuM_AddDeletepop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmMenuM_AddDeletepop.Designer.cs">
+      <DependentUpon>frmMenuM_AddDeletepop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmUserM_Addpop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmUserM_Addpop.Designer.cs">
+      <DependentUpon>frmUserM_Addpop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmUsergroupMSet_CRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmUsergroupMSet_CRUD.Designer.cs">
+      <DependentUpon>frmUsergroupMSet_CRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmUsergroupMSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmUsergroupMSet.Designer.cs">
+      <DependentUpon>frmUsergroupMSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagementForm\UserInfo.cs" />
+    <Compile Include="TaskInstructionManagementForm\frmAddCreateFigurationTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskInstructionManagementForm\frmAddCreateFigurationTask.Designer.cs">
+      <DependentUpon>frmAddCreateFigurationTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskInstructionManagementForm\frmCreateFigurationTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskInstructionManagementForm\frmCreateFigurationTask.Designer.cs">
+      <DependentUpon>frmCreateFigurationTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIPAddress1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIPAddress1.Designer.cs">
+      <DependentUpon>frmIPAddress1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSystemCodeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSystemCodeDetail.Designer.cs">
+      <DependentUpon>frmSystemCodeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmAddWorkCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmAddWorkCenter.Designer.cs">
+      <DependentUpon>frmAddWorkCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmCarriageInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmCarriageInfo.Designer.cs">
+      <DependentUpon>frmCarriageInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmItemLevelInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmItemLevelInfo.Designer.cs">
+      <DependentUpon>frmItemLevelInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmProcessInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmProcessInfo.Designer.cs">
+      <DependentUpon>frmProcessInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmAnalysisOfAbsenteeism.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmAnalysisOfAbsenteeism.Designer.cs">
+      <DependentUpon>frmAnalysisOfAbsenteeism.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmCarriageHistoryInquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmCarriageHistoryInquiry.Designer.cs">
+      <DependentUpon>frmCarriageHistoryInquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmCarriageStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmCarriageStatus.Designer.cs">
+      <DependentUpon>frmCarriageStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmDefective.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmDefective.Designer.cs">
+      <DependentUpon>frmDefective.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmDefectiveDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmDefectiveDetail.Designer.cs">
+      <DependentUpon>frmDefectiveDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmDefectiveImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmDefectiveImage.Designer.cs">
+      <DependentUpon>frmDefectiveImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmERPabsenteeismCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmERPabsenteeismCheck.Designer.cs">
+      <DependentUpon>frmERPabsenteeismCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmFinishedProductWarehousingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmFinishedProductWarehousingList.Designer.cs">
+      <DependentUpon>frmFinishedProductWarehousingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmGasUsageRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmGasUsageRegistration.Designer.cs">
+      <DependentUpon>frmGasUsageRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmMaterialLOTManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmMaterialLOTManagement.Designer.cs">
+      <DependentUpon>frmMaterialLOTManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmNonOperatingRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmNonOperatingRegistration.Designer.cs">
+      <DependentUpon>frmNonOperatingRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmNonOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmNonOperation.Designer.cs">
+      <DependentUpon>frmNonOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmNonOperationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmNonOperationDetail.Designer.cs">
+      <DependentUpon>frmNonOperationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmPackagingPaletteFinishing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmPackagingPaletteFinishing.Designer.cs">
+      <DependentUpon>frmPackagingPaletteFinishing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmPerformanceCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformanceManagementForm\frmPerformanceCheck.Designer.cs">
+      <DependentUpon>frmPerformanceCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmProcessConditionQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmProcessConditionQuery.Designer.cs">
+      <DependentUpon>frmProcessConditionQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmProcessConditionRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityAssuranceForm\frmProcessConditionRegistration.Designer.cs">
+      <DependentUpon>frmProcessConditionRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmSpecifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterDataManagementForm\frmSpecifications.Designer.cs">
+      <DependentUpon>frmSpecifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentForm\Detail_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\Detail_Popup.Designer.cs">
+      <DependentUpon>Detail_Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentForm\List_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\List_Detail.Designer.cs">
+      <DependentUpon>List_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentForm\List_Detail_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\List_Detail_Popup.Designer.cs">
+      <DependentUpon>List_Detail_Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentForm\List_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\List_Popup.Designer.cs">
+      <DependentUpon>List_Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentForm\List_List_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\List_List_Popup.Designer.cs">
+      <DependentUpon>List_List_Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentForm\List_List_b2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\List_List_b2.Designer.cs">
+      <DependentUpon>List_List_b2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentForm\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentForm\List_b.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\List_b.Designer.cs">
+      <DependentUpon>List_b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentForm\List_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\List_List.Designer.cs">
+      <DependentUpon>List_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentForm\List_List_h.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentForm\List_List_h.Designer.cs">
+      <DependentUpon>List_List_h.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleForm\Detail_Popup_Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleForm\Detail_Popup_Sample.Designer.cs">
+      <DependentUpon>Detail_Popup_Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleForm\List_b_Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleForm\List_b_Sample.Designer.cs">
+      <DependentUpon>List_b_Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleForm\List_Detail_Popup_Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleForm\List_Detail_Popup_Sample.Designer.cs">
+      <DependentUpon>List_Detail_Popup_Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleForm\List_Detail_Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleForm\List_Detail_Sample.Designer.cs">
+      <DependentUpon>List_Detail_Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleForm\List_List_b2_Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleForm\List_List_b2_Sample.Designer.cs">
+      <DependentUpon>List_List_b2_Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleForm\List_List_b_Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleForm\List_List_b_Sample.Designer.cs">
+      <DependentUpon>List_List_b_Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleForm\List_List_h_Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleForm\List_List_h_Sample.Designer.cs">
+      <DependentUpon>List_List_h_Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleForm\List_List_Popup_Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleForm\List_List_Popup_Sample.Designer.cs">
+      <DependentUpon>List_List_Popup_Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleForm\List_List_Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleForm\List_List_Sample.Designer.cs">
+      <DependentUpon>List_List_Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleForm\List_Popup_Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleForm\List_Popup_Sample.Designer.cs">
+      <DependentUpon>List_Popup_Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleForm\List_Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleForm\List_Sample.Designer.cs">
+      <DependentUpon>List_Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmUsergroupM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmUsergroupM.Designer.cs">
+      <DependentUpon>frmUsergroupM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmUserM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemManagementForm\frmUserM.Designer.cs">
+      <DependentUpon>frmUserM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskInstructionManagementForm\frmDailyTimelineResultMgmt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskInstructionManagementForm\frmDailyTimelineResultMgmt.Designer.cs">
+      <DependentUpon>frmDailyTimelineResultMgmt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskInstructionManagementForm\frmEndTaskMgmt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskInstructionManagementForm\frmEndTaskMgmt.Designer.cs">
+      <DependentUpon>frmEndTaskMgmt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcPeriodControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcPeriodControl.Designer.cs">
+      <DependentUpon>UcPeriodControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UcCarriageMoniter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UcCarriageMoniter.Designer.cs">
+      <DependentUpon>UcCarriageMoniter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\CommonUtil.cs" />
+    <Compile Include="Util\ExcelUtil_List.cs" />
+    <Compile Include="Util\ListDataTable.cs" />
+    <Compile Include="Util\LoggingUtility.cs" />
+    <Compile Include="Util\MailUtil.cs" />
+    <Compile Include="Util\RegistryHelp.cs" />
+    <Compile Include="XtraReport1_Kim.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport1_Kim.Designer.cs">
+      <DependentUpon>XtraReport1_Kim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraRepotPreview_Kim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XtraRepotPreview_Kim.Designer.cs">
+      <DependentUpon>XtraRepotPreview_Kim.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BarcodeSetting_Kim.resx">
+      <DependentUpon>BarcodeSetting_Kim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AButton.resx">
+      <DependentUpon>AButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DateTimePickerSearch.resx">
+      <DependentUpon>DateTimePickerSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiaryManagementForm\frmMakeWorkLog.resx">
+      <DependentUpon>frmMakeWorkLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiaryManagementForm\frmMaterialWorkLog.resx">
+      <DependentUpon>frmMaterialWorkLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiaryManagementForm\frmPankingWorkLog.resx">
+      <DependentUpon>frmPankingWorkLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiaryManagementForm\PackingLog.resx">
+      <DependentUpon>PackingLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiaryManagementForm\WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiaryManagementForm\XtraReportFrmMakeWorkLog.resx">
+      <DependentUpon>XtraReportFrmMakeWorkLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiaryManagementForm\XtraReportFrmMaterialWorkLog.resx">
+      <DependentUpon>XtraReportFrmMaterialWorkLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain2.resx">
+      <DependentUpon>frmMain2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuSetting.resx">
+      <DependentUpon>frmMenuSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewUser.resx">
+      <DependentUpon>frmNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPost.resx">
+      <DependentUpon>frmPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmPkgGrdDetailDef.resx">
+      <DependentUpon>frmPkgGrdDetailDef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmUserDefCodeDetail.resx">
+      <DependentUpon>frmUserDefCodeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\frmGridPopUp2.resx">
+      <DependentUpon>frmGridPopUp2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\List_List_b.resx">
+      <DependentUpon>List_List_b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="QualityAssuranceForm\frmDefectiveImageRegPopUp.resx">
+      <DependentUpon>frmDefectiveImageRegPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityAssuranceForm\frmProcessConditionRegistrationPopUp2.resx">
+      <DependentUpon>frmProcessConditionRegistrationPopUp2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityAssuranceForm\frmRegisterQualityMeasurementsPopUp2.resx">
+      <DependentUpon>frmRegisterQualityMeasurementsPopUp2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmNonOperatingRegistrationPopUp2.resx">
+      <DependentUpon>frmNonOperatingRegistrationPopUp2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmPerformanceModify2.resx">
+      <DependentUpon>frmPerformanceModify2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmPerformancePartition2.resx">
+      <DependentUpon>frmPerformancePartition2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmProcessCondition.resx">
+      <DependentUpon>frmProcessCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmUserDefCode.resx">
+      <DependentUpon>frmUserDefCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityAssuranceForm\frmRegisterQualityMeasurements3.resx">
+      <DependentUpon>frmRegisterQualityMeasurements3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmAddItem.resx">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmPalleteModifyRating.resx">
+      <DependentUpon>frmPalleteModifyRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmCopyProcessConditions.resx">
+      <DependentUpon>frmCopyProcessConditions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmMonitoringCarrige.resx">
+      <DependentUpon>frmMonitoringCarrige.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmQualitySpecificationCopyPopUp.resx">
+      <DependentUpon>frmQualitySpecificationCopyPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\frmGridPopUp.resx">
+      <DependentUpon>frmGridPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNotice1.resx">
+      <DependentUpon>frmNotice1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIPAddress1.resx">
+      <DependentUpon>frmIPAddress1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityAssuranceForm\frmQualityMeasurementInquiry2.resx">
+      <DependentUpon>frmQualityMeasurementInquiry2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSystemCode1.resx">
+      <DependentUpon>frmSystemCode1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSystemCodeDetail.resx">
+      <DependentUpon>frmSystemCodeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageAnalysisForm\frmMonthlyPkgState.resx">
+      <DependentUpon>frmMonthlyPkgState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageAnalysisForm\frmMonthlyPrdState.resx">
+      <DependentUpon>frmMonthlyPrdState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmAddWorkCenter.resx">
+      <DependentUpon>frmAddWorkCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmCarriageInfo.resx">
+      <DependentUpon>frmCarriageInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmItemInfo.resx">
+      <DependentUpon>frmItemInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmItemLevelInfo.resx">
+      <DependentUpon>frmItemLevelInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmProcessInfo.resx">
+      <DependentUpon>frmProcessInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmWorkCenterInfo.resx">
+      <DependentUpon>frmWorkCenterInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoldManagementForm\frmMoldInfoAdd.resx">
+      <DependentUpon>frmMoldInfoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoldManagementForm\frmMoldUse.resx">
+      <DependentUpon>frmMoldUse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmAnalysisOfAbsenteeism.resx">
+      <DependentUpon>frmAnalysisOfAbsenteeism.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmCarriageHistoryInquiry.resx">
+      <DependentUpon>frmCarriageHistoryInquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmCarriageStatus.resx">
+      <DependentUpon>frmCarriageStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmDefective.resx">
+      <DependentUpon>frmDefective.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmDefectiveDetail.resx">
+      <DependentUpon>frmDefectiveDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityAssuranceForm\frmDefectiveImage.resx">
+      <DependentUpon>frmDefectiveImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmERPabsenteeismCheck.resx">
+      <DependentUpon>frmERPabsenteeismCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmFinishedProductWarehousingList.resx">
+      <DependentUpon>frmFinishedProductWarehousingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmGasUsageRegistration.resx">
+      <DependentUpon>frmGasUsageRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityAssuranceForm\frmMaterialLOTManagement.resx">
+      <DependentUpon>frmMaterialLOTManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmNonOperatingRegistration.resx">
+      <DependentUpon>frmNonOperatingRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmNonOperation.resx">
+      <DependentUpon>frmNonOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmNonOperationDetail.resx">
+      <DependentUpon>frmNonOperationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmPackagingPaletteFinishing.resx">
+      <DependentUpon>frmPackagingPaletteFinishing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerformanceManagementForm\frmPerformanceCheck.resx">
+      <DependentUpon>frmPerformanceCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityAssuranceForm\frmProcessConditionQuery.resx">
+      <DependentUpon>frmProcessConditionQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QualityAssuranceForm\frmProcessConditionRegistration.resx">
+      <DependentUpon>frmProcessConditionRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterDataManagementForm\frmSpecifications.resx">
+      <DependentUpon>frmSpecifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\Detail_Popup.resx">
+      <DependentUpon>Detail_Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\List_Detail.resx">
+      <DependentUpon>List_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\List_Detail_Popup.resx">
+      <DependentUpon>List_Detail_Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\List_Popup.resx">
+      <DependentUpon>List_Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\List_List_Popup.resx">
+      <DependentUpon>List_List_Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\List_List_b2.resx">
+      <DependentUpon>List_List_b2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\List_b.resx">
+      <DependentUpon>List_b.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\List_List.resx">
+      <DependentUpon>List_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentForm\List_List_h.resx">
+      <DependentUpon>List_List_h.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SampleForm\Detail_Popup_Sample.resx">
+      <DependentUpon>Detail_Popup_Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleForm\List_b_Sample.resx">
+      <DependentUpon>List_b_Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleForm\List_Detail_Popup_Sample.resx">
+      <DependentUpon>List_Detail_Popup_Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleForm\List_Detail_Sample.resx">
+      <DependentUpon>List_Detail_Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleForm\List_List_b2_Sample.resx">
+      <DependentUpon>List_List_b2_Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleForm\List_List_b_Sample.resx">
+      <DependentUpon>List_List_b_Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleForm\List_List_h_Sample.resx">
+      <DependentUpon>List_List_h_Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleForm\List_List_Popup_Sample.resx">
+      <DependentUpon>List_List_Popup_Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleForm\List_List_Sample.resx">
+      <DependentUpon>List_List_Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleForm\List_Popup_Sample.resx">
+      <DependentUpon>List_Popup_Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleForm\List_Sample.resx">
+      <DependentUpon>List_Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManagementForm\frmFormM.resx">
+      <DependentUpon>frmFormM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManagementForm\frmLoginInfo.resx">
+      <DependentUpon>frmLoginInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManagementForm\frmMenuM.resx">
+      <DependentUpon>frmMenuM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManagementForm\frmMenuM_AddDeletepop.resx">
+      <DependentUpon>frmMenuM_AddDeletepop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManagementForm\frmUsergroupMSet.resx">
+      <DependentUpon>frmUsergroupMSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManagementForm\frmUsergroupM.resx">
+      <DependentUpon>frmUsergroupM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManagementForm\frmUsergroupMSet_CRUD.resx">
+      <DependentUpon>frmUsergroupMSet_CRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManagementForm\frmUserM.resx">
+      <DependentUpon>frmUserM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemManagementForm\frmUserM_Addpop.resx">
+      <DependentUpon>frmUserM_Addpop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskInstructionManagementForm\frmAddCreateFigurationTask.resx">
+      <DependentUpon>frmAddCreateFigurationTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskInstructionManagementForm\frmCreateFigurationTask.resx">
+      <DependentUpon>frmCreateFigurationTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskInstructionManagementForm\frmDailyTimelineResultMgmt.resx">
+      <DependentUpon>frmDailyTimelineResultMgmt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskInstructionManagementForm\frmEndTaskMgmt.resx">
+      <DependentUpon>frmEndTaskMgmt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcPeriodControl.resx">
+      <DependentUpon>UcPeriodControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UcCarriageMoniter.resx">
+      <DependentUpon>UcCarriageMoniter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport1_Kim.resx">
+      <DependentUpon>XtraReport1_Kim.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ttemplate\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\addstar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\home %281%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\home.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\ico.ico" />
+    <Content Include="Image\minus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\plus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\refresh-page-option.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\ro2.2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\save-file.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\settings %281%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\settings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\star.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\trash.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\로고.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\로고2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\폴더 아이콘.jpg" />
+    <Content Include="Image\회색.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\흰색.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\close-red1.png" />
+    <None Include="Resources\close-red.png" />
+    <None Include="Resources\close-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\FinalProjectVO.csproj">
+      <Project>{511fe5d6-1f1c-4358-b72b-17821bcc2a93}</Project>
+      <Name>FinalProjectVO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinalProjectDAC\FinalProjectDAC.csproj">
+      <Project>{d040b795-bc61-4958-93e5-f0016144327b}</Project>
+      <Name>FinalProjectDAC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
